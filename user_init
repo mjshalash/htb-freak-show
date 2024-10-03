@@ -12,7 +12,7 @@ cp ./htb-freak-show/user_init ./user_init
 
 # Append htb-freak-show .bashrc to .bashrc if it's not already there
 if ! grep -q "htb-freak-show" ~/.bashrc; then
-  echo ./bashrc >> ~/.bashrc
+  cat ./.bashrc > ~/.bashrc
   echo "# htb-freak-show additions to .bashrc" >> ~/.bashrc
   echo "source ~/my_data/htb-freak-show/.bashrc" >> ~/.bashrc
 fi
