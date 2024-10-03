@@ -9,12 +9,13 @@ git clone https://github.com/mjshalash/htb-freak-show.git
 
 # Ensure we have the latest version of user_init
 cp ./htb-freak-show/user_init ./user_init
+cp ./htb-freak-show/.bashrc ./.bashrc_freak_show
 
 # Append htb-freak-show .bashrc to .bashrc if it's not already there
 if ! grep -q "htb-freak-show" ~/.bashrc; then
   echo "# htb-freak-show additions to .bashrc" >> ~/.bashrc
   echo "source ~/my_data/htb-freak-show/.bashrc" >> ~/.bashrc
-  cat ./.bashrc >> ~/.bashrc
+  cat ./.bashrc_freak_show >> ~/.bashrc
 fi
 
 # Make htb-freak-show scripts executable
