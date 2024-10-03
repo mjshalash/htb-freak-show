@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -d "~/tools/radare2" ]; then
+  echo "radare2 already installed at ~/tools/radare2"
+  return
+fi
+
+cd ~/tools
+
+git clone https://github.com/radareorg/radare2
+cd radare2 ; sys/install.sh

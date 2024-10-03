@@ -1,0 +1,58 @@
+#!/bin/bash
+#This script is executed every time your instance is spawned.
+
+# Clone the htb-freak-show repo and get user_init up to date
+cd
+cd my_data
+rm -rf htb-freak-show
+git clone https://github.com/mjshalash/htb-freak-show.git
+
+# Ensure we have the latest version of user_init
+cp ./htb-freak-show/user_init ./user_init
+
+# Append htb-freak-show .bashrc to .bashrc if it's not already there
+if ! grep -q "htb-freak-show" ~/.bashrc; then
+  echo "" >> ~/.bashrc
+  echo "# htb-freak-show additions to .bashrc" >> ~/.bashrc
+  echo "source ~/my_data/htb-freak-show/.bashrc" >> ~/.bashrc
+fi
+
+# Make htb-freak-show scripts executable
+for file in ~/my_data/htb-freak-show/scripts/*;
+do
+  if [[ -f $file ]]; then
+    chmod +x $file
+  fi
+done
+
+# Create tools directory for further tool installations
+mkdir ~/tools
+
+
+# Make htb-freak-show memos executable
+# for file in ~/my_data/htb-freak-show/memos/*;
+# do
+#   if [[ -f $file ]]; then
+#     chmod +x $file
+#   fi
+# done
+
+# Set up gnome-keyring-daemon so we don't get prompted to set a password during apt installations
+# echo -n "htb-freak-show" | gnome-keyring-daemon --unlock
+
+# Set default file types to be opened by VS Code (codium) by default
+# xdg-mime default codium.desktop application/octet-stream # files with no extension
+# xdg-mime default codium.desktop text/plain
+# xdg-mime default codium.desktop application/x-shellscript
+# xdg-mime default codium.desktop text/x-csharp
+# xdg-mime default codium.desktop text/x-c
+# xdg-mime default codium.desktop text/x-python
+# xdg-mime default codium.desktop application/javascript
+# xdg-mime default codium.desktop text/typescript
+# xdg-mime default codium.desktop text/html
+# xdg-mime default codium.desktop text/css
+# xdg-mime default codium.desktop application/x-ruby
+# xdg-mime default codium.desktop application/x-perl
+# xdg-mime default codium.desktop application/x-php
+
+sudo apt update &
