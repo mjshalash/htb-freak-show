@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "
+python3 -m http.server 8000
+
+Running this from a specific folder will use that folder as the root for the web server. 
+This is useful for when we may want to serve up files to a remote system that we have achieved a shell on.
+"

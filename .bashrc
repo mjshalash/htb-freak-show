@@ -6,7 +6,5 @@ export HISTTIMEFORMAT="[%Y/%m/%d %T] "
 shopt -s histappend
 
 # Append a few things to PATH
-export PATH=$PATH:~/my_data/htb-freak-show/scripts:~/my_data/htb-freak-show/memos
-
-px-download-bin-tools > /dev/null 2>&1 & disown
+export PATH=$PATH:~/my_data/htb-freak-show/scripts:~/my_data/htb-freak-show/notes
 
