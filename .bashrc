@@ -7,4 +7,3 @@ shopt -s histappend
 
 # Append a few things to PATH
 export PATH=$PATH:~/my_data/htb-freak-show/scripts:~/my_data/htb-freak-show/notes
-

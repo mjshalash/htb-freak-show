@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ -d "~/tools/peass" ]; then
+  echo "PEASS already installed at ~/tools/peass"
+  return
+fi
+
+cd ~/tools
+mkdir peass
+cd peass
+
+wget -N https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
+wget -N https://github.com/carlospolop/PEASS-ng/releases/download/refs%2Fpull%2F260%2Fmerge/winPEASx64.exe

@@ -17,6 +17,10 @@ if ! grep -q "htb-freak-show" ~/.bashrc; then
   cat ~/my_data/htb-freak-show/.bashrc >> ~/.bashrc
 fi
 
+# Create tools directory for further tool installations
+mkdir ~/tools
+
+
 # Make htb-freak-show scripts executable
 for file in ~/my_data/htb-freak-show/scripts/*;
 do
@@ -24,10 +28,6 @@ do
     chmod +x $file
   fi
 done
-
-# Create tools directory for further tool installations
-mkdir ~/tools
-
 
 # Make htb-freak-show memos executable
 for file in ~/my_data/htb-freak-show/notes/*;

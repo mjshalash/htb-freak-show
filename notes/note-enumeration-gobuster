@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "
+--------------------------
+--- Directory Enumeration
+--------------------------
+Gobuster can be used to enumerate possible sub-directories at a target URL
+
+gobuster dir -u <Target URL> -w <wordlist>
+
+
+"

