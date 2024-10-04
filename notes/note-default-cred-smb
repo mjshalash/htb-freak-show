@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "
+Source: https://book.hacktricks.xyz/network-services-pentesting/pentesting-smb#possible-credentials
+
+(blank):(blank)
+guest:(blank)
+Administrator|admin:(blank)|password|administrator|admin
+arcserve:arcserve|backup
+tivoli|tmersrvd:tivoli|tmersrvd|admin
+backupexec|backup:backupexec|backup|arcada
+test|lab|demo:password|test|lab|demo
+"
