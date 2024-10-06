@@ -60,4 +60,5 @@ sudo apt update
 
 sudo apt install -y \
   payloadsallthethings \
-  seclists
+  seclists \
+  sqlmap
