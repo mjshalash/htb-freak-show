@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -d "~/tools/peass" ]; then
+if [ -d "~/tools/snmpbw" ]; then
   echo "SNMPBW is already installed at ~/tools/snmpbw"
   return
 fi
