@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -d "~/tools/peass" ]; then
+  echo "SNMPBW is already installed at ~/tools/snmpbw"
+  return
+fi
+
+cd ~/tools
+mkdir snmpbw
+cd snmpbw
+
+wget -N https://github.com/dheiland-r7/snmp/blob/master/snmpbw.pl
