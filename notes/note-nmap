@@ -23,6 +23,8 @@ nmap <other_options> -Pn
 
 # Scan UDP ports (requires root)
 sudo nmap -sU <target>
+    --top-ports <number> -> scan top <number> ports
+    -T3 -> slower scan
 
 # Increase verbosity with -vvv
 nmap -sV -vvv <target>
