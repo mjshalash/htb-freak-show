@@ -1,5 +1,5 @@
 # htb-freak-show
-Full Collection of utilities for use with HTB's pwnbox
+Full Collection of utilities for use with HackTheBox's pwnbox platform VM. Configured on pwnbox to automatically download and execute on VM startup.
 
 Initial installation:
 
