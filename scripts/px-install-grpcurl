@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ -d "~/tools/grpcurl" ]; then
+  echo "~/tools/grpcurl already exists. grpcurl appears to already be installed."
+  return
+fi
+
+# Currently pulls v1.9.3
+cd ~/tools
+mkdir grpcurl
+cd grpcurl
+curl -LO https://github.com/fullstorydev/grpcurl/releases/download/v1.9.3/grpcurl_1.9.3_linux_x86_64.tar.gz
+
+tar -xzf grpcurl_1.9.3_linux_x86_64.tar.gz
+
+sudo mv grpcurl /usr/local/bin/grpcurl
